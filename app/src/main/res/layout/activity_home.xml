@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradiant"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/mFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:background="@color/mLineclr"
+        android:paddingStart="@dimen/_20dp"
+        android:paddingEnd="@dimen/_20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/mLLHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mIVHome"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:src="@drawable/ic_home_selected" />
+
+            <TextView
+                android:id="@+id/mTxtHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/home"
+                android:textAppearance="@style/TextAppearance.MyApp.Caption"
+                android:textColor="@color/selector_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mLLWidget"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mIVWidget"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:src="@drawable/ic_more_unselected" />
+
+            <TextView
+                android:id="@+id/mTxtWidget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/more"
+                android:textAppearance="@style/TextAppearance.MyApp.Caption"
+                android:textColor="@color/selector_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mLLSetting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mIVSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:src="@drawable/ic_setting_unselected" />
+
+            <TextView
+                android:id="@+id/mTxtSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/setting"
+                android:textAppearance="@style/TextAppearance.MyApp.Caption"
+                android:textColor="@color/selector_color" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

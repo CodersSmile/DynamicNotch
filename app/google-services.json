@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "358166792194",
+    "project_id": "dynamicnotch-41a10",
+    "storage_bucket": "dynamicnotch-41a10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358166792194:android:8c25870ead2de434ffff1b",
+        "android_client_info": {
+          "package_name": "com.iosnotch.dynamic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358166792194-bbco4bs3tesdnh7ev161skjtfd5ulgqd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iosnotch.dynamic",
+            "certificate_hash": "4485208cdcb89ff74208f128e7e81a1ee6901df1"
+          }
+        },
+        {
+          "client_id": "358166792194-t8h6bsonbrn9thdg9mqevqajr8c2e67j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvXDWvTCbY2WeJnTQ5XFXjDHPeu5DS2Vg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358166792194-t8h6bsonbrn9thdg9mqevqajr8c2e67j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

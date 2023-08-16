@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:androidprv="http://schemas.android.com/apk/prv/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/civ_senderIcon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:padding="@dimen/medium_margin"
+        android:src="@drawable/default_blue"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Avatar" />
+
+    <ImageView
+        android:id="@+id/civ_senderIcon2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/default_blue"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/arrow_iv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/iv_app_icon"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:layout_marginRight="@dimen/medium_margin2"
+        android:src="@drawable/arrow_down" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_app_title"
+        android:layout_alignBottom="@+id/tv_app_title"
+        android:layout_toStartOf="@+id/arrow_iv"
+        android:layout_toLeftOf="@+id/arrow_iv"
+        android:gravity="center_vertical"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_app_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/civ_senderIcon"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:layout_toStartOf="@+id/chronometer"
+        android:layout_toLeftOf="@+id/chronometer"
+        android:layout_toEndOf="@+id/civ_senderIcon"
+        android:layout_toRightOf="@+id/civ_senderIcon"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="@string/test_text"
+        android:textColor="@color/on_text"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_app_title"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:layout_toLeftOf="@+id/iv_app_icon"
+        android:layout_toRightOf="@+id/civ_senderIcon"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="@string/test_text"
+        android:textColor="@color/on_text"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/sub_tv_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_text"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:layout_toLeftOf="@+id/arrow_iv"
+        android:layout_toRightOf="@+id/civ_senderIcon"
+        android:maxLines="1"
+        android:text="@string/test_text"
+        android:textColor="@color/on_text"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/ll_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sub_tv_text"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/mediaPosText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="2.05"
+            android:textColor="@color/media_time_color"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/sub_progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/mediaDurationText"
+            android:layout_toEndOf="@+id/mediaPosText"
+            android:progressDrawable="@drawable/progess_bar_bg"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/mediaDurationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2.05"
+            android:textColor="@color/media_time_color"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/group_message_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_progressbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:orientation="vertical" />
+
+    <ImageView
+        android:id="@+id/iv_app_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/profile_icon" />
+
+    <ImageView
+        android:id="@+id/notification_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_message_parent"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@+id/notification_top_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notification_picture"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/notification_material_reply_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/ed_reply"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/reply_bg"
+                android:hint="@string/reply"
+                android:imeOptions="actionSend"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/gray_transparent"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/iv_send_reply"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/send_reply_iv"
+                app:tint="@color/blue_400" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/notification_action_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/notification_top_container"
+        android:background="@color/gray_transparent"
+        android:visibility="gone" />
+</RelativeLayout>

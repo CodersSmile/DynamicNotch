@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:androidprv="http://schemas.android.com/apk/prv/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="5dp">
+
+    <ImageView
+        android:id="@+id/island_small_left_iv"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:padding="2dp"
+        android:src="@drawable/profile_icon" />
+
+    <TextView
+        android:id="@+id/island_small_text_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/island_small_left_iv"
+        android:gravity="center_vertical"
+        android:text="0.15"
+        android:textColor="@color/green"
+        android:textSize="12sp" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/island_small_text_left"
+        android:gravity="center_vertical"
+        android:textColor="@color/green_500"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:paddingEnd="5dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/right_lottie"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:padding="3dp"
+            android:tint="@color/gray"
+            android:visibility="gone"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/wave_call01" />
+
+        <TextView
+            android:id="@+id/island_small_text_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical|center_horizontal|center|end"
+            android:maxLength="8"
+            android:text="sender"
+            android:textColor="@color/green"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/island_small_image_right"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:padding="2dp"
+            android:src="@drawable/missed_call" />
+    </LinearLayout>
+</RelativeLayout>

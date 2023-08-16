@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_14dp"
+        android:layout_marginBottom="@dimen/_2dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_30dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/mTxtDtl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:gravity="center"
+                android:text="Take a moment to tell us how you feel"
+                android:textAppearance="@style/TextAppearance.MyApp.Body2"
+                android:textColor="@color/black" />
+
+            <RatingBar
+                android:id="@+id/mRatingBar"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10dp"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:progressDrawable="@drawable/rating_bar"
+                android:rating="4"
+                android:stepSize="1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:layout_marginBottom="@dimen/_20dp"
+                android:gravity="center"
+                android:text="Your feedback will help us to improve\nproduct experience"
+                android:textAppearance="@style/TextAppearance.MyApp.Caption"
+                android:textColor="#5C5C5C" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

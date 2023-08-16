@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/_20dp"
+    android:paddingEnd="@dimen/_20dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:text="@string/app_name"
+                android:textAppearance="@style/TextAppearance.MyApp.Headline5"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/mTxtStatusBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:layout_marginBottom="@dimen/_20dp"
+                android:text="@string/statusbar"
+                android:textAppearance="@style/TextAppearance.MyApp.Body1"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mTxtEnableIsland"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_noti"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/enable"
+                    android:textAppearance="@style/TextAppearance.MyApp.Caption"
+                    android:textColor="@color/white" />
+
+                <ToggleButton
+                    android:id="@+id/mToggleEnableIsland"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:background="@null"
+                    android:button="@drawable/btntoggle"
+                    android:checked="false"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:textOff=""
+                    android:textOn="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mTxtEnableSmartMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_enble_smart_menu"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/enablesmartmenu"
+                    android:textAppearance="@style/TextAppearance.MyApp.Caption"
+                    android:textColor="@color/white" />
+
+                <ToggleButton
+                    android:id="@+id/mToggleEnableSmartMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:background="@null"
+                    android:button="@drawable/btntoggle"
+                    android:checked="false"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:textOff=""
+                    android:textOn="" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:background="@color/mLineclr" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20dp"
+                android:drawableStart="@drawable/ic_camera_pos"
+                android:drawablePadding="@dimen/_10dp"
+                android:gravity="center_vertical"
+                android:text="@string/cemraPos"
+                android:textAppearance="@style/TextAppearance.MyApp.Caption"
+                android:textColor="@color/white" />
+
+            <RadioGroup
+                android:id="@+id/cam_pos_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:checkedButton="@+id/center_camera"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RadioButton
+                    android:id="@+id/left_camera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:button="@drawable/btn_check_blue"
+                    android:paddingStart="5dp"
+                    android:text="Left"
+                    android:textAppearance="@style/TextAppearance.MyApp.Body1"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/center_camera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:button="@drawable/btn_check_blue"
+                    android:buttonTint="@null"
+                    android:paddingStart="5dp"
+                    android:text="Center"
+                    android:textAppearance="@style/TextAppearance.MyApp.Body1"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/right_camera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:button="@drawable/btn_check_blue"
+                    android:paddingStart="5dp"
+                    android:text="Right"
+                    android:textAppearance="@style/TextAppearance.MyApp.Body1"
+                    android:textColor="@color/white" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20dp"
+                android:drawableStart="@drawable/ic_margin"
+                android:drawablePadding="@dimen/_10dp"
+                android:gravity="center_vertical"
+                android:text="@string/margin"
+                android:textAppearance="@style/TextAppearance.MyApp.Caption"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mTxtUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_up"
+                    android:drawablePadding="@dimen/_4dp"
+                    android:text="@string/up"
+                    android:textAppearance="@style/TextAppearance.MyApp.Body2"
+                    android:textColor="@color/white" />
+
+                <SeekBar
+                    android:id="@+id/mSBMargin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="20"
+                    android:maxHeight="4dp"
+                    android:minHeight="4dp"
+                    android:progress="5"
+                    android:progressDrawable="@drawable/seekbar_tint"
+                    android:thumb="@drawable/ic_seekbar_thumb" />
+
+                <TextView
+                    android:id="@+id/mTxtDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_down"
+                    android:drawablePadding="@dimen/_4dp"
+                    android:text="@string/down"
+                    android:textAppearance="@style/TextAppearance.MyApp.Body2"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_30dp"
+                android:drawableStart="@drawable/ic_camera_count"
+                android:drawablePadding="@dimen/_10dp"
+                android:gravity="center_vertical"
+                android:text="@string/cemraCount"
+                android:textAppearance="@style/TextAppearance.MyApp.Caption"
+                android:textColor="@color/white" />
+
+            <RadioGroup
+                android:id="@+id/cam_count_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:checkedButton="@+id/one_camera"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RadioButton
+                    android:id="@+id/one_camera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:button="@drawable/btn_check_blue"
+                    android:paddingStart="5dp"
+                    android:text="1"
+                    android:textAppearance="@style/TextAppearance.MyApp.Body1"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/two_camera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:button="@drawable/btn_check_blue"
+                    android:paddingStart="5dp"
+                    android:text="2"
+                    android:textAppearance="@style/TextAppearance.MyApp.Body1"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/three_camera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:button="@drawable/btn_check_blue"
+                    android:paddingStart="5dp"
+                    android:text="3"
+                    android:textAppearance="@style/TextAppearance.MyApp.Body1"
+                    android:textColor="@color/white" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20dp"
+                android:drawableStart="@drawable/ic_height"
+                android:drawablePadding="@dimen/_10dp"
+                android:gravity="center_vertical"
+                android:text="@string/height"
+                android:textAppearance="@style/TextAppearance.MyApp.Caption"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mTxtminus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_minus"
+                    android:drawablePadding="@dimen/_4dp"
+                    android:text="@string/minus"
+                    android:textAppearance="@style/TextAppearance.MyApp.Body2"
+                    android:textColor="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/mSBHeight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="40"
+                    android:min="25"
+                    android:maxHeight="4dp"
+                    android:minHeight="4dp"
+                    android:progress="30"
+                    android:progressDrawable="@drawable/seekbar_tint"
+                    android:thumb="@drawable/ic_seekbar_thumb" />
+
+                <TextView
+                    android:id="@+id/mTxtPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_plus"
+                    android:drawablePadding="@dimen/_4dp"
+                    android:text="@string/plus"
+                    android:textAppearance="@style/TextAppearance.MyApp.Body2"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mTxtEnableGlow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_enable_glow"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/enableglow"
+                    android:textAppearance="@style/TextAppearance.MyApp.Caption"
+                    android:textColor="@color/white" />
+
+                <ToggleButton
+                    android:id="@+id/mToggleEnableGlow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:background="@null"
+                    android:button="@drawable/btntoggle"
+                    android:checked="false"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:textOff=""
+                    android:textOn="" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_30dp"
+                android:drawableStart="@drawable/ic_gradint_clr"
+                android:drawablePadding="@dimen/_10dp"
+                android:gravity="center_vertical"
+                android:text="@string/gradintClr"
+                android:textAppearance="@style/TextAppearance.MyApp.Caption"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_20dp"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/mTxtStartClr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:drawableStart="@drawable/ic_circle"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/startClr"
+                    android:textAppearance="@style/TextAppearance.MyApp.Caption"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/mTxtEndClr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_circle"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/endClr"
+                    android:textAppearance="@style/TextAppearance.MyApp.Caption"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
